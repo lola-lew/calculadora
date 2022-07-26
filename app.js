@@ -6,7 +6,29 @@ window.addEventListener('load', () => {
 
   keypadButtonsArray.forEach((button) => {
     button.addEventListener('click', () => {
-      console.log(button.innerHTML);
+      calculadora(button, display);
     })
   })
-})
+});
+
+function calculadora(button, display) {
+  switch (button.innerHTML) {
+    case 'C':
+      borrar(display);
+      break;
+    case '=':
+      calcular(display);
+      break;
+    default:
+      actualizar(display);
+      break;
+  }
+};
+
+function calcular(display) {
+  display.innerHTML = eval(display.innerHTML);
+}
+
+function actualizar(display, button) {
+
+}
