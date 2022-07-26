@@ -36,4 +36,8 @@ function actualizar(display, button) {
     display.innerHTML = '';
   }
   display.innerHTML += button.innerHTML;
-}
+};
+
+function borrar(display) {
+  display.innerHTML = 0;
+};
