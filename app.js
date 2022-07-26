@@ -30,5 +30,8 @@ function calcular(display) {
 }
 
 function actualizar(display, button) {
-
+  if (display.innerHTML == 0) {
+    display.innerHTML = '';
+  }
+  display.innerHTML += button.innerHTML;
 }
