@@ -16,11 +16,13 @@ function calculadora(button, display) {
     case 'C':
       borrar(display);
       break;
+
     case '=':
       calcular(display);
       break;
+
     default:
-      actualizar(display);
+      actualizar(display, button);
       break;
   }
 };
